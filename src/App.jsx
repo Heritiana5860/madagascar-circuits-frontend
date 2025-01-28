@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Landing from './pages/landing/Landing';
 import CircuitPangalanes from './pages/Tours/CircuitPangalanes';
 import LoadingSpinner from './components/LoadSpinner';
+import CarRentals from './pages/carRentals/CarRentals';
 
 
 
@@ -28,6 +29,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/tours" element={<CircuitPangalanes />} />
+              <Route path="/location-de-voitures" element={<CarRentals />} />
             </Routes>
           </main>
           <Footer />

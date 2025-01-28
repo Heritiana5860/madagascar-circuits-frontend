@@ -8,7 +8,7 @@ const Navbar = () => {
   const menuItems = [
     { to: "/", label: "Accueil" },
     { to: "/tours", label: "Circuits" },
-    { to: "/car-rentals", label: "Location de Voitures" },
+    { to: "/location-de-voitures", label: "Location de Voitures" },
     { to: "/about", label: "À Propos" },
     { to: "/contact", label: "Contact" },
     { to: "/faq", label: "FAQ" },
