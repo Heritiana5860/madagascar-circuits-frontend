@@ -45,7 +45,7 @@ export default function Contact()  {
         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <MapPin className="w-10 h-10 text-yellow-500 mb-4" />
           <h3 className="font-semibold text-xl mb-2">Adresse</h3>
-          <p className="text-gray-600">Antananarivo, Madagascar</p>
+          <p className="text-gray-600">Madagascar</p>
         </div>
       </div>
 
