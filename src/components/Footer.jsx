@@ -6,7 +6,7 @@ const Footer = () => {
     { to: "/", label: "Accueil" },
     { to: "/tours", label: "Circuits" },
     { to: "/location-de-voitures", label: "Location de Voitures" },
-    { to: "/about", label: "À Propos" },
+    { to: "/apropos", label: "À Propos" },
     { to: "/contact", label: "Contact" },
     { to: "/faq", label: "FAQ" },
     { to: "/languages", label: "Langues" }

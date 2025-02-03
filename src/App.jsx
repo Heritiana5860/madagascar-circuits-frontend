@@ -6,6 +6,9 @@ import Landing from './pages/landing/Landing';
 import CircuitPangalanes from './pages/Tours/CircuitPangalanes';
 import LoadingSpinner from './components/LoadSpinner';
 import CarRentals from './pages/carRentals/CarRentals';
+import Contact from './pages/Contact/Contact';
+import FAQ from './pages/FAQ/Faq';
+import Apropos from './pages/Apropos/Apropos';
 
 
 
@@ -30,6 +33,9 @@ const App = () => {
               <Route path="/" element={<Landing />} />
               <Route path="/tours" element={<CircuitPangalanes />} />
               <Route path="/location-de-voitures" element={<CarRentals />} />
+              <Route path='/apropos'  element={<Apropos />}/>
+              <Route path='/contact'  element={<Contact />}/>
+              <Route path='/faq'  element={<FAQ />}/>
             </Routes>
           </main>
           <Footer />

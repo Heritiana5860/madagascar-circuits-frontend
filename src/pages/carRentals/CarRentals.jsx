@@ -1,64 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, Car, Search, ChevronLeft, ChevronRight, Star, X } from 'lucide-react';
 import PaymentInterface from './PaymentInterface';
+import allCars from '../../components/carRentals/allCars';
+import categories from '../../components/carRentals/categories';
 
 const CarRentals = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [showSearch, setShowSearch] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [isSearchSticky, setIsSearchSticky] = useState(false);
+    const [setIsSearchSticky] = useState(false);
     const [selectedCar, setSelectedCar] = useState(null);
-
-    // Categories
-    const categories = [
-        { id: 'all', name: 'Tous les véhicules', icon: Car },
-        { id: '4x4', name: '4x4', icon: Car },
-        { id: 'van', name: 'Van', icon: Users },
-        { id: 'luxury', name: 'Luxe', icon: Star }
-    ];
-
-    // Car data
-    const allCars = [
-        {
-            id: 1,
-            name: "Land Cruiser V8",
-            category: "4x4",
-            price: 150,
-            image: "/api/placeholder/800/500",
-            rating: 4.9,
-            reviews: 124,
-            capacity: 7,
-            features: ["7 places", "Automatique", "GPS", "Climatisation"],
-            description: "Parfait pour les aventures tout-terrain et le confort absolu"
-        },
-        {
-            id: 2,
-            name: "Mercedes Sprinter",
-            category: "van",
-            price: 180,
-            image: "/api/placeholder/800/500",
-            rating: 4.8,
-            reviews: 98,
-            capacity: 12,
-            features: ["12 places", "Automatique", "WiFi", "Climatisation"],
-            description: "Idéal pour les groupes et les longs trajets confortables"
-        },
-        {
-            id: 3,
-            name: "Bentley Continental",
-            category: "luxury",
-            price: 300,
-            image: "/api/placeholder/800/500",
-            rating: 5.0,
-            reviews: 56,
-            capacity: 4,
-            features: ["4 places", "Automatique", "Cuir", "Massage"],
-            description: "L'excellence automobile pour vos déplacements"
-        }
-    ];
 
     // Filter cars
     const filteredCars = allCars.filter(car =>
@@ -95,7 +48,7 @@ const CarRentals = () => {
             {/* Floating Search Button */}
             <button
                 onClick={() => setShowSearch(true)}
-                className={`fixed right-6 top-24 z-50 bg-orange-500 text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 ${showSearch ? 'opacity-0' : 'opacity-100'
+                className={`fixed right-6 top-24 z-50 bg-yellow-500 text-white p-4 rounded-full shadow-lg hover:bg-yellow-600 transition-all duration-300 ${showSearch ? 'opacity-0' : 'opacity-100'
                     }`}
             >
                 <Search className="w-6 h-6" />
@@ -122,14 +75,14 @@ const CarRentals = () => {
                                     placeholder="Rechercher un véhicule..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-10 pr-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                    className="w-full pl-10 pr-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-yellow-500"
                                 />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div className="relative group">
-                                    <MapPin className="absolute left-3 top-3 text-gray-400 group-hover:text-orange-500 transition-colors" />
-                                    <select className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none bg-white">
+                                    <MapPin className="absolute left-3 top-3 text-gray-400 group-hover:text-yellow-500 transition-colors" />
+                                    <select className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 appearance-none bg-white">
                                         <option>Choisir un lieu</option>
                                         <option>Antananarivo</option>
                                         <option>Nosy Be</option>
@@ -137,12 +90,12 @@ const CarRentals = () => {
                                     </select>
                                 </div>
                                 <div className="relative group">
-                                    <Calendar className="absolute left-3 top-3 text-gray-400 group-hover:text-orange-500 transition-colors" />
-                                    <input type="date" className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500" />
+                                    <Calendar className="absolute left-3 top-3 text-gray-400 group-hover:text-yellow-500 transition-colors" />
+                                    <input type="date" className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500" />
                                 </div>
                                 <div className="relative group">
-                                    <Users className="absolute left-3 top-3 text-gray-400 group-hover:text-orange-500 transition-colors" />
-                                    <select className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none bg-white">
+                                    <Users className="absolute left-3 top-3 text-gray-400 group-hover:text-yellow-500 transition-colors" />
+                                    <select className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 appearance-none bg-white">
                                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
                                             <option key={num} value={num}>{num} passager{num > 1 ? 's' : ''}</option>
                                         ))}
@@ -152,7 +105,7 @@ const CarRentals = () => {
 
                             <button
                                 onClick={() => setShowSearch(false)}
-                                className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300"
+                                className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300"
                             >
                                 Rechercher
                             </button>
@@ -192,9 +145,9 @@ const CarRentals = () => {
                                         </span>
                                     </div>
                                     <div className="flex space-x-4">
-                                        <button 
-                                        onClick={() => setSelectedCar(car)}
-                                        className="bg-gradient-to-r from-orange-500 to-yellow-500 px-8 py-3 rounded-full hover:scale-105 transition-transform duration-300">
+                                        <button
+                                            onClick={() => setSelectedCar(car)}
+                                            className="bg-gradient-to-r from-yellow-400 to-yellow-600 px-8 py-3 rounded-full hover:scale-105 transition-transform duration-300">
                                             Réserver maintenant
                                         </button>
                                         <button className="bg-white/20 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-white/30 transition-colors duration-300">
@@ -220,7 +173,7 @@ const CarRentals = () => {
                             <button
                                 key={index}
                                 onClick={() => setActiveSlide(index)}
-                                className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === activeSlide ? 'bg-orange-500' : 'bg-white/50 hover:bg-white'
+                                className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === activeSlide ? 'bg-yellow-500' : 'bg-white/50 hover:bg-white'
                                     }`}
                             />
                         ))}
@@ -244,8 +197,8 @@ const CarRentals = () => {
                                 key={category.id}
                                 onClick={() => setSelectedCategory(category.id)}
                                 className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 ${selectedCategory === category.id
-                                        ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
-                                        : 'bg-white border hover:border-orange-500 hover:text-orange-500'
+                                        ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white'
+                                        : 'bg-white border hover:border-yellow-500 hover:text-yellow-500'
                                     }`}
                             >
                                 <CategoryIcon className="w-5 h-5" />
@@ -272,7 +225,7 @@ const CarRentals = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="absolute top-4 right-4 bg-white/90 rounded-full px-3 py-1 flex items-center space-x-1">
-                                    <Users className="w-4 h-4 text-orange-500" />
+                                    <Users className="w-4 h-4 text-yellow-500" />
                                     <span className="text-sm font-medium">{car.capacity}</span>
                                 </div>
                             </div>
@@ -286,24 +239,23 @@ const CarRentals = () => {
                                         </p>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-3xl font-bold text-orange-500">{car.price}€</p>
+                                        <p className="text-3xl font-bold text-yellow-500">{car.price}€</p>
                                         <p className="text-gray-600">par jour</p>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4 mb-6">
                                     {car.features.map((feature, index) => (
                                         <div key={index} className="flex items-center text-gray-600">
-                                            <span className="w-2 h-2 bg-orange-500 rounded-full mr-2" />
+                                            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2" />
                                             {feature}
                                         </div>
                                     ))}
                                 </div>
                                 <button
                                     onClick={() => setSelectedCar(car)}
-                                    className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300">
+                                    className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 rounded-xl font-medium hover:scale-105 transition-transform duration-300">
                                     Réserver maintenant
                                 </button>
-
                             </div>
                         </div>
                     ))}
