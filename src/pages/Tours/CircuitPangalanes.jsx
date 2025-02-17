@@ -2,7 +2,6 @@ import 'leaflet/dist/leaflet.css';
 import HeroSection from '../../components/circuitsSection/HeroSection';
 import OverviewSection from '../../components/circuitsSection/OverviewSection';
 import ProgrammeSection from '../../components/circuitsSection/ProgrammeSection';
-import FAQSection from '../../components/circuitsSection/FAQSection';
 import CTASection from '../../components/circuitsSection/CTA';
 import GallerySection from '../../components/circuitsSection/GallerySection';
 import ReviewsSection from '../../components/circuitsSection/ReviewsSection';
@@ -36,9 +35,6 @@ const CircuitPangalanes = () => {
 
       {/* Reviews Section */}
       <ReviewsSection />
-
-      {/* FAQ Section */}
-      <FAQSection />
     </div>
   );
 };
