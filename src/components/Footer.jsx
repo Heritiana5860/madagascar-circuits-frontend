@@ -9,7 +9,6 @@ const Footer = () => {
     { to: "/apropos", label: "À Propos" },
     { to: "/contact", label: "Contact" },
     { to: "/faq", label: "FAQ" },
-    { to: "/languages", label: "Langues" }
   ];
 
   return (
