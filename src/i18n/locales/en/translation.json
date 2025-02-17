@@ -1,0 +1,17 @@
+{
+    "nav": {
+      "home": "Home",
+      "tours": "Tours",
+      "carRental": "Car Rental",
+      "about": "About",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "mainNavigation": "Main navigation",
+      "homeLink": "Back to home",
+      "logo": "Mada Circuits Logo",
+      "selectLanguage": "Select language",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  }
+  

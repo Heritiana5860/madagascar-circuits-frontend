@@ -1,0 +1,16 @@
+{
+    "nav": {
+      "home": "Accueil",
+      "tours": "Circuits",
+      "carRental": "Location de Voitures",
+      "about": "À Propos",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "mainNavigation": "Navigation principale",
+      "homeLink": "Retour à l'accueil",
+      "logo": "Logo Mada Circuits",
+      "selectLanguage": "Sélectionner une langue",
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu"
+    }
+  }

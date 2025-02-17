@@ -9,6 +9,7 @@ import CarRentals from './pages/carRentals/CarRentals';
 import Contact from './pages/Contact/Contact';
 import FAQ from './pages/FAQ/Faq';
 import Apropos from './pages/Apropos/Apropos';
+import './i18n/i18n'
 
 
 
