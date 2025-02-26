@@ -1,15 +1,12 @@
 import {
-  AudioWaveform,
-  Command,
   Users,
   Car,
-  // Map,
-  // PieChart,
+  Map,
   SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
+import { NavParameters } from "@/components/nav-parameters"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
@@ -32,16 +29,6 @@ const data = {
       logo: Car,
       plan: "Administration",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
   ],
   navMain: [
     {
@@ -63,16 +50,12 @@ const data = {
       url: "#",
       icon: Users,
     },
-    // {
-    //   name: "Sales & Marketing",
-    //   url: "#",
-    //   icon: PieChart,
-    // },
-    // {
-    //   name: "Travel",
-    //   url: "#",
-    //   icon: Map,
-    // },
+    
+    {
+      name: "Map",
+      url: "#",
+      icon: Map,
+    },
   ],
 }
 
@@ -86,7 +69,7 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavParameters projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
