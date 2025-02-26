@@ -11,6 +11,7 @@ import FAQ from './pages/FAQ/Faq';
 import Apropos from './pages/Apropos/Apropos';
 import Dashboard from './pages/backoffice/dashboard';
 import './i18n/i18n';
+import LoginPage from './app/login/page';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -22,15 +23,22 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const isDashboardRoute = window.location.pathname.startsWith('/backoffice');
+  const currentPath = window.location.pathname;
+  const isDashboardRoute = currentPath.startsWith('/backoffice');
+  const isLoginRoute = currentPath === '/login';
 
   return (
     <Router>
       {loading && <LoadingSpinner />}
       
       <div className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-        {isDashboardRoute ? (
-   
+        {isLoginRoute ? (
+              <Routes>
+                <Route path="/login" element={<LoginPage />} />
+              </Routes>
+  
+        ) : isDashboardRoute ? (
+          // Routes pour le backoffice
           <Routes>
             <Route path="/backoffice/*" element={<Dashboard />} />
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
