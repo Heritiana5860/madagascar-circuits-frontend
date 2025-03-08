@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion';
+import recolte from '@assets/recolte-de-girofle.JPG';
+import excursion from '@assets/excursion-canal.jpg';
+import transport from '@assets/transport.JPG';
+import vanille from '@assets/vanille-et-fleure.JPG';
+import tete from '@assets/tete-bateau.jpg';
 
 const images = [
   "https://cdn.pixabay.com/photo/2019/03/28/10/24/madagascar-4086877_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2019/10/29/15/30/madagascar-4587230_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2019/11/06/15/53/africa-4606513_960_720.jpg",
-  "https://media.istockphoto.com/id/468053366/photo/off-road-madagascar.jpg?s=2048x2048&w=is&k=20&c=Vm7f9ks2cMNHj4m10kk_o59lbY05CfNmJ69d1W8BTmA=",
-  "https://media.istockphoto.com/id/468053358/photo/baobab-off-road.jpg?s=2048x2048&w=is&k=20&c=-qh4F7s39EPtnq1xCe8LGs9OiJ7OmUXO6RD_RqbYr2Q=",
-  "https://cdn.pixabay.com/photo/2019/10/31/09/03/freesbee-4591399_960_720.jpg"
+  excursion,
+  vanille,
+  recolte,
+  transport,
+  tete
 ];
 
 const GallerySection = () => {
