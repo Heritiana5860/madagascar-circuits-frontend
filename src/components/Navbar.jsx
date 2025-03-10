@@ -22,8 +22,8 @@ const Navbar = () => {
   const menuItems = [
     { to: "/", label: t('nav.home') },
     { to: "/tours", label: t('nav.tours') },
-    { to: "/car-rental", label: t('nav.carRental') },
-    { to: "/about", label: t('nav.about') },
+    { to: "/location-de-voitures", label: t('nav.carRental') },
+    { to: "/apropos", label: t('nav.about') },
     { to: "/contact", label: t('nav.contact') },
     { to: "/faq", label: t('nav.faq') }
   ];
